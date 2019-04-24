@@ -1,0 +1,36 @@
+version: '3.2'
+
+# Create appication and development services
+services:
+
+  ### APPLICATION SERVICES ###
+
+  ## Frontend service
+  ## Open: http://localhost/
+  bogenliga-frontend:
+      container_name: bogenliga-frontend
+      build: ./container/bogenliga-frontend
+      ports:
+          - "80:80"
+
+  ## Backend service
+  ## Open: http://localhost:9000/
+  ## Open: http://localhost:9001/actuator/health
+  ## Open: http://localhost:9001/actuator/info
+  bogenliga-backend:
+      container_name: bogenliga-backend
+      build: ./container/bogenliga-backend
+      ports:
+          - "9000:9000"
+          - "9001:9001"
+      depends_on:
+          - bogenliga-db
+
+   ## The database starts automatically with Docker
+   ## The ./bogenliga-db/Dockerfile creates the databases and users
+  bogenliga-db:
+     container_name: bogenliga-db
+     build: ./container/bogenliga-db
+     ports:
+       - "5432:5432"
+     restart: always
