@@ -4,4 +4,4 @@ COPY staging/backend.jar /backend.jar
 
 EXPOSE 9000 9001
 
-ENTRYPOINT java -jar /backend.jar
+ENTRYPOINT java -jar -Dspring.profiles.active=DOCKER /backend.jar
