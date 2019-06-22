@@ -1,0 +1,7 @@
+.idea
+*.iml
+*/target/*
+env.sh
+env.cmd
+
+\.DS_Store

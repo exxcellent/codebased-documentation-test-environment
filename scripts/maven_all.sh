@@ -39,6 +39,10 @@ do
             mvn -f $TEST_ENVIRONMENT_HOME/bogenliga/project/swt2-bsa-backend/bogenliga/pom.xml $MAVEN_COMMAND
             ;;
 
+        $BMW_RSA_VEHICLE_SERVICES)
+            printf "\nExecuting command: %s \n" "mvn -f $TEST_ENVIRONMENT_HOME/bmw-example/project/rsa-vehicle-services/root-pom/pom.xml $MAVEN_COMMAND"
+            mvn -f $TEST_ENVIRONMENT_HOME/bmw-example/project/rsa-vehicle-services/root-pom/pom.xml $MAVEN_COMMAND
+            ;;
         # New microservice? Add your line here!
     esac
 done 

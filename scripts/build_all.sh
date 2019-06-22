@@ -15,7 +15,9 @@ do
             NPM_SERVICES="$NPM_SERVICES bogenliga-frontend"
             MAVEN_SERVICES="$MAVEN_SERVICES bogenliga-backend"
             ;;
-
+        $BMW_ALL_MICROSERVICES)
+            MAVEN_SERVICES="$MAVEN_SERVICES rve"
+            ;;
         # New microservice? Add your line here!
     esac
 done

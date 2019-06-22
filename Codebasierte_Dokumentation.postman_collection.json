@@ -1,0 +1,399 @@
+{
+	"info": {
+		"_postman_id": "9e8eb94d-371f-4bdb-875f-92edd504f5bc",
+		"name": "Codebasierte Dokumentation",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "bmw",
+			"item": [
+				{
+					"name": "Vehicle Services - Send Notification",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"message\": \"Hallo Welt\",\n    \"vehicleId\": 1\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/vehicle/services/api/v1/notify-vehicle",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"vehicle",
+								"services",
+								"api",
+								"v1",
+								"notify-vehicle"
+							]
+						},
+						"description": "Campaign Management => Vehicle Services -> Vehicle Information"
+					},
+					"response": []
+				},
+				{
+					"name": "Vehicle Information - Get All Vehicle Information",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8070/vehicle/information/api/v1/vehicle-information",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8070",
+							"path": [
+								"vehicle",
+								"information",
+								"api",
+								"v1",
+								"vehicle-information"
+							]
+						},
+						"description": "Campaign Management => Vehicle Services -> Vehicle Information"
+					},
+					"response": []
+				},
+				{
+					"name": "Vehicle Information - Get Vehicle Information By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8070/vehicle/information/api/v1/vehicle-information/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8070",
+							"path": [
+								"vehicle",
+								"information",
+								"api",
+								"v1",
+								"vehicle-information",
+								"1"
+							]
+						},
+						"description": "Campaign Management => Vehicle Services -> Vehicle Information"
+					},
+					"response": []
+				},
+				{
+					"name": "Vehicle Information - Create Vehicle Information",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Tolles Auto\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8070/vehicle/information/api/v1/vehicle-information",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8070",
+							"path": [
+								"vehicle",
+								"information",
+								"api",
+								"v1",
+								"vehicle-information"
+							]
+						},
+						"description": "Campaign Management => Vehicle Services -> Vehicle Information"
+					},
+					"response": []
+				},
+				{
+					"name": "Vehicle Information - Update Vehicle Information",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"vehicleId\": 1,\n\t\"name\": \"Super tolles Auto\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8070/vehicle/information/api/v1/vehicle-information",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8070",
+							"path": [
+								"vehicle",
+								"information",
+								"api",
+								"v1",
+								"vehicle-information"
+							]
+						},
+						"description": "Campaign Management => Vehicle Services -> Vehicle Information"
+					},
+					"response": []
+				},
+				{
+					"name": "Vehicle Information - Delete Vehicle Information By ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8070/vehicle/information/api/v1/vehicle-information/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8070",
+							"path": [
+								"vehicle",
+								"information",
+								"api",
+								"v1",
+								"vehicle-information",
+								"1"
+							]
+						},
+						"description": "Campaign Management => Vehicle Services -> Vehicle Information"
+					},
+					"response": []
+				},
+				{
+					"name": "Vehicle Management - Get All Vehicles",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8060/vehicle/management/api/v1/vehicle",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8060",
+							"path": [
+								"vehicle",
+								"management",
+								"api",
+								"v1",
+								"vehicle"
+							]
+						},
+						"description": "Campaign Management => Vehicle Services -> Vehicle Information"
+					},
+					"response": []
+				},
+				{
+					"name": "Vehicle Management - Get Vehicle by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8060/vehicle/management/api/v1/vehicle/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8060",
+							"path": [
+								"vehicle",
+								"management",
+								"api",
+								"v1",
+								"vehicle",
+								"1"
+							]
+						},
+						"description": "Campaign Management => Vehicle Services -> Vehicle Information"
+					},
+					"response": []
+				},
+				{
+					"name": "Vehicle Management - Send Vehicle Notification",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8060/vehicle/management/api/v1/trigger-notification?vehicleId=1&message=Hallo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8060",
+							"path": [
+								"vehicle",
+								"management",
+								"api",
+								"v1",
+								"trigger-notification"
+							],
+							"query": [
+								{
+									"key": "vehicleId",
+									"value": "1"
+								},
+								{
+									"key": "message",
+									"value": "Hallo"
+								}
+							]
+						},
+						"description": "Campaign Management => Vehicle Services -> Vehicle Information"
+					},
+					"response": []
+				},
+				{
+					"name": "Vehicle Management - Create Vehicle",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Tolles Auto\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8060/vehicle/management/api/v1/vehicle",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8060",
+							"path": [
+								"vehicle",
+								"management",
+								"api",
+								"v1",
+								"vehicle"
+							]
+						},
+						"description": "Campaign Management => Vehicle Services -> Vehicle Information"
+					},
+					"response": []
+				},
+				{
+					"name": "Vehicle Management - Update Vehicle",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"vehicleId\": 1,\n\t\"name\": \"Super tolles Auto\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8060/vehicle/management/api/v1/vehicle",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8060",
+							"path": [
+								"vehicle",
+								"management",
+								"api",
+								"v1",
+								"vehicle"
+							]
+						},
+						"description": "Campaign Management => Vehicle Services -> Vehicle Information"
+					},
+					"response": []
+				},
+				{
+					"name": "Vehicle Management - Delete Vehicle by ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8060/vehicle/management/api/v1/vehicle/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8060",
+							"path": [
+								"vehicle",
+								"management",
+								"api",
+								"v1",
+								"vehicle",
+								"1"
+							]
+						},
+						"description": "Campaign Management => Vehicle Services -> Vehicle Information"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

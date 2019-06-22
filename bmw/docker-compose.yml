@@ -1,0 +1,30 @@
+version: '3.2'
+
+# Create appication and development services
+services:
+
+  ### APPLICATION SERVICES ###
+  vehicle-services:
+    container_name: vehicle-services
+    build: ./container/vehicle-services
+    environment:
+      - VEHICLE_INFORMATION_BASE_URL=http://vehicle-information:8080/vehicle/information/api
+      - VEHICLE_INFORMATION_SUB_URL=v1/vehicle-information
+    ports:
+      - 8080:8080
+
+  vehicle-information:
+    container_name: vehicle-information
+    build: ./container/vehicle-information
+    ports:
+      - 8070:8080
+
+  vehicle-management:
+    container_name: vehicle-management
+    build: ./container/vehicle-management
+    environment:
+      - VEHICLE_INFORMATION_BASE_URL=http://vehicle-information:8080/vehicle/information/api
+      - VEHICLE_INFORMATION_SUB_URL=v1/vehicle-information
+      - VEHICLE_SERVICES_BASE_URL=http://vehicle-services:8080/vehicle/services/api
+    ports:
+      - 8060:8080

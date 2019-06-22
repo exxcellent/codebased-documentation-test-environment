@@ -7,22 +7,30 @@ source $DIR/env.conf
 # stop execution, if parameter list is empty
 if [ $# -eq 0 ]
     then {
-        echo "No test environment defined. Stopping execution. Use $ sh ./docker-ps.sh [bogenliga|bmw|daimler]."
+        echo "No test environment defined. Stopping execution. Use $ sh ./docker-ps.sh [all|bogenliga|bmw|daimler]."
         exit 1
         }
-    else SERVICES=$@
+    else SERVICE=$@
 fi
 
-for service in $SERVICES
-do
-    case $service in
-        $BOGENLIGA_ALL_MICROSERVICES)
-            COMPOSE_FILE=$TEST_ENVIRONMENT_HOME/bogenliga/docker-compose.yml
-            ;;
+if [ "$SERVICE" == "$BMW" ]; then
+    COMPOSE_FILE=$BMW_COMPOSE_FILE
+    echo "docker-compose -f $COMPOSE_FILE down"
+    docker-compose -f $COMPOSE_FILE down
+elif [ "$SERVICE" == "$BOGENLIGA" ]; then
+    COMPOSE_FILE=$BOGENLIGA_COMPOSE_FILE
+    echo "docker-compose -f $COMPOSE_FILE down"
+    docker-compose -f $COMPOSE_FILE down
+elif [ "$SERVICE" == "all" ]; then
+    echo "Stopping all test environments"
 
-        # New microservice? Add your line here!
-    esac
-done
+    COMPOSE_FILE=$BOGENLIGA_COMPOSE_FILE
+    echo "docker-compose -f $COMPOSE_FILE down"
+    docker-compose -f $COMPOSE_FILE down
 
-echo "docker-compose -f $COMPOSE_FILE ps"
-docker-compose -f $COMPOSE_FILE down
+    COMPOSE_FILE=$BMW_COMPOSE_FILE
+    echo "docker-compose -f $COMPOSE_FILE down"
+    docker-compose -f $COMPOSE_FILE down
+fi
+
+
