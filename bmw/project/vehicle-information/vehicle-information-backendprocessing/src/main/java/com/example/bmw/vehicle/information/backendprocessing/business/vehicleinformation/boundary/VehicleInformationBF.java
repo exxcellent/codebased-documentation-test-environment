@@ -1,10 +1,10 @@
-package com.example.bmw.vehicle.information.backendprocessing.business.vehicleservices.boundary;
+package com.example.bmw.vehicle.information.backendprocessing.business.vehicleinformation.boundary;
 
 import java.util.Set;
 import javax.inject.Inject;
 import com.example.bmw.common.validation.Preconditions;
-import com.example.bmw.vehicle.information.backendprocessing.business.vehicleservices.control.VehicleInformationBA;
-import com.example.bmw.vehicle.information.backendprocessing.business.vehicleservices.types.VehicleTO;
+import com.example.bmw.vehicle.information.backendprocessing.business.vehicleinformation.control.VehicleInformationBA;
+import com.example.bmw.vehicle.information.backendprocessing.business.vehicleinformation.types.VehicleTO;
 
 public class VehicleInformationBF implements VehicleInformationBCI {
 

@@ -1,9 +1,8 @@
-package com.example.bmw.vehicle.information.backendprocessing.business.vehicleservices.mapper;
+package com.example.bmw.vehicle.information.backendprocessing.business.vehicleinformation.mapper;
 
 import java.util.logging.Logger;
 import com.example.bmw.vehicle.information.backendprocessing.business.store.entity.VehicleInformationBE;
-import com.example.bmw.vehicle.information.backendprocessing.business.store.entity.VehicleInformationStoreEM;
-import com.example.bmw.vehicle.information.backendprocessing.business.vehicleservices.types.VehicleTO;
+import com.example.bmw.vehicle.information.backendprocessing.business.vehicleinformation.types.VehicleTO;
 
 public class VehicleServicesMapper {
     private static final Logger LOG = Logger.getLogger( VehicleServicesMapper.class.getName() );

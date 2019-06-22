@@ -1,7 +1,7 @@
-package com.example.bmw.vehicle.information.backendprocessing.business.vehicleservices.boundary;
+package com.example.bmw.vehicle.information.backendprocessing.business.vehicleinformation.boundary;
 
 import java.util.Set;
-import com.example.bmw.vehicle.information.backendprocessing.business.vehicleservices.types.VehicleTO;
+import com.example.bmw.vehicle.information.backendprocessing.business.vehicleinformation.types.VehicleTO;
 
 public interface VehicleInformationBCI {
     VehicleTO getVehicleInformation(int id);

@@ -1,12 +1,12 @@
-package com.example.bmw.vehicle.information.backendprocessing.business.vehicleservices.control;
+package com.example.bmw.vehicle.information.backendprocessing.business.vehicleinformation.control;
 
 import java.util.Set;
 import java.util.stream.Collectors;
 import javax.inject.Inject;
 import com.example.bmw.vehicle.information.backendprocessing.business.store.boundary.VehicleInformationStoreICI;
 import com.example.bmw.vehicle.information.backendprocessing.business.store.entity.VehicleInformationBE;
-import com.example.bmw.vehicle.information.backendprocessing.business.vehicleservices.mapper.VehicleServicesMapper;
-import com.example.bmw.vehicle.information.backendprocessing.business.vehicleservices.types.VehicleTO;
+import com.example.bmw.vehicle.information.backendprocessing.business.vehicleinformation.mapper.VehicleServicesMapper;
+import com.example.bmw.vehicle.information.backendprocessing.business.vehicleinformation.types.VehicleTO;
 
 
 public class VehicleInformationBA {

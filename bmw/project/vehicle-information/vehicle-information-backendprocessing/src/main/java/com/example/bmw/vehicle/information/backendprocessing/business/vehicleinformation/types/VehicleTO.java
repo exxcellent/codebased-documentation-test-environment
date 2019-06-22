@@ -1,4 +1,4 @@
-package com.example.bmw.vehicle.information.backendprocessing.business.vehicleservices.types;
+package com.example.bmw.vehicle.information.backendprocessing.business.vehicleinformation.types;
 
 public class VehicleTO {
 
